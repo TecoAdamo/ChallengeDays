@@ -10,16 +10,21 @@ import UIKit
 
 class CustomCard: UIView {
     
-    private let myCard: UIView = {
-        let view = UIView()
-        view.backgroundColor = Colors.cardBackground
-        view.layer.cornerRadius = 12
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.1
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-        view.layer.shadowRadius = 8
-        return view
+    private let myCard: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.spacing = 12
+        stack.alignment = .center
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.backgroundColor = Colors.cardBackground
+        stack.layer.cornerRadius = 12
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.layer.shadowColor = UIColor.black.cgColor
+        stack.layer.shadowOpacity = 0.1
+        stack.layer.shadowOffset = CGSize(width: 0, height: 4)
+        stack.layer.shadowRadius = 8
+        return stack
     }()
     
     private let iconContainer: UIView = {
@@ -76,12 +81,11 @@ class CustomCard: UIView {
         gradient.endPoint = CGPoint(x: 1, y: 1)
         gradient.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         iconContainer.layer.insertSublayer(gradient, at: 0)
-        
         iconContainer.addSubview(iconImage)
         
         textStack.addArrangedSubview(titleLabel)
-        
-        myCard.addSubview(textStack)
+        myCard.addArrangedSubview(textStack)
+        addSubview(myCard)
         
         setupConstraints()
     }
@@ -109,8 +113,27 @@ class CustomCard: UIView {
     }
     
     
-    func configure(title: String, icon: String) {
+    func configure(title: String, icon: String? = nil) {
         titleLabel.text = title
-        iconImage.image = UIImage(systemName: icon)
+        
+        if let icon = icon {
+            iconImage.image = UIImage(systemName: icon)
+            iconContainer.isHidden = false
+        } else {
+            iconContainer.isHidden = true
+        }
+        
+        if let icon = icon {
+            iconImage.image = UIImage(systemName: icon)
+            if !myCard.arrangedSubviews.contains(iconContainer) {
+                myCard.insertArrangedSubview(iconContainer, at: 0)
+            }
+            iconContainer.isHidden = false
+        } else {
+            iconContainer.isHidden = true
+            myCard.removeArrangedSubview(iconContainer)
+            iconContainer.removeFromSuperview()
+        }
     }
 }
+

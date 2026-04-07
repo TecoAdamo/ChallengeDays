@@ -13,6 +13,10 @@ class ChallengeView: UIView {
     let card = CustomCard()
     let progressView = ProgressCircleView()
     
+    let stepperView = StepperView(steps: 7, currentStep: 2)
+    
+    let subCard = CustomCard()
+    
     lazy var label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -50,8 +54,14 @@ class ChallengeView: UIView {
         addSubview(card)
         addSubview(progressView)
         
+        addSubview(stepperView)
+        
+        addSubview(subCard)
+        
         card.translatesAutoresizingMaskIntoConstraints = false
         progressView.translatesAutoresizingMaskIntoConstraints = false
+        stepperView.translatesAutoresizingMaskIntoConstraints = false
+        subCard.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -68,7 +78,15 @@ class ChallengeView: UIView {
             progressView.topAnchor.constraint(equalTo: card.bottomAnchor, constant: 32),
             progressView.centerXAnchor.constraint(equalTo: centerXAnchor),
             progressView.widthAnchor.constraint(equalToConstant: 200),
-            progressView.heightAnchor.constraint(equalToConstant: 200)
+            progressView.heightAnchor.constraint(equalToConstant: 200),
+            
+            stepperView.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 32),
+            stepperView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            stepperView.heightAnchor.constraint(equalToConstant: 40),
+            
+            subCard.topAnchor.constraint(equalTo: stepperView.bottomAnchor, constant: 32),
+            subCard.centerXAnchor.constraint(equalTo: centerXAnchor),
+            subCard.heightAnchor.constraint(equalToConstant: 60),
             
         ])
         progressView.setProgress(value: 2, total: 7)
@@ -78,8 +96,6 @@ class ChallengeView: UIView {
             title: "Estudar",
             icon: "flame.fill"
         )
+        subCard.configure(title: "Day 2 - The Beginning")
     }
-    
-    
-    
 }
