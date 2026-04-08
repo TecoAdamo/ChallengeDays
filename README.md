@@ -1,9 +1,9 @@
 🔥 ChallengeDays
 Create, track and complete weekly challenges — and see who's winning among friends.
 
-<img width="700" height="700" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 54 35" src="https://github.com/user-attachments/assets/5f794f09-d068-4590-8243-f9719e672016" />
-<img width="700" height="700" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 55 29" src="https://github.com/user-attachments/assets/8d0b94d2-23e7-4454-b29b-355a801853df" />
-<img width="700" height="700" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 56 30" src="https://github.com/user-attachments/assets/a2b911b3-0f46-4787-89e2-92c8826b45ac" />
+<img width="300" height="300" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 54 35" src="https://github.com/user-attachments/assets/5f794f09-d068-4590-8243-f9719e672016" />
+<img width="300" height="300" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 55 29" src="https://github.com/user-attachments/assets/8d0b94d2-23e7-4454-b29b-355a801853df" />
+<img width="300" height="300" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 56 30" src="https://github.com/user-attachments/assets/a2b911b3-0f46-4787-89e2-92c8826b45ac" />
 
 
 📱 About
