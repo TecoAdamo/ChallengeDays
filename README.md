@@ -1,4 +1,4 @@
-🔥 ChallengeDays
+# 🔥 ChallengeDays
 Create, track and complete weekly challenges — and see who's winning among friends.
 
 <img width="300" height="700" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 54 35" src="https://github.com/user-attachments/assets/5f794f09-d068-4590-8243-f9719e672016" />
