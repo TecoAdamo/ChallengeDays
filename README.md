@@ -6,13 +6,14 @@ Create, track and complete weekly challenges — and see who's winning among fri
 <img width="300" height="700" alt="Simulator Screenshot - iPhone 17 26 2 - 2026-04-07 at 22 56 30" src="https://github.com/user-attachments/assets/a2b911b3-0f46-4787-89e2-92c8826b45ac" />
 
 
-📱 About
+# 📱 About
+
 ChallengeDays is an iOS app where users can create their own weekly challenges and track their daily progress. The app features a friends ranking system that shows who's completing the most challenges — turning personal discipline into a social and competitive experience.
 
 Built entirely with UIKit using View Code (no Storyboards, no XIBs) and Core Data for local persistence.
 
 
-✨ Features
+# ✨ Features
 
 🎯 Custom Challenges — Create weekly challenges with a name and number of days
 📅 Daily Progress Tracking — Complete one day at a time with a clear visual flow
@@ -23,14 +24,15 @@ Built entirely with UIKit using View Code (no Storyboards, no XIBs) and Core Dat
 💾 Local Storage with Core Data — All data persists offline, no account required
 
 
-🛠 Tech Stack
+# 🛠 Tech Stack
+
 Layer: Technology
 Language: Swift 6
 UI Framework: UIKit (100% View Code)
 Persistence: Core Data
 Architecture: MVVM. 
 
-🏗 Project Structure
+# 🏗 Project Structure
 
 ``` ChallengeDays/
 ├── App/
@@ -59,7 +61,7 @@ Architecture: MVVM.
     └── Colors.swift
 ```
 
-Installation
+# Installation
 
 # Clone the repository
 git clone https://github.com/your-username/ChallengeDays.git
