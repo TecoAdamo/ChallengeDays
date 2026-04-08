@@ -48,4 +48,15 @@ class StepperView: UIView {
         if step == currentStep { return .active }
         return .inactive
     }
+    
+    func update(currentStep: Int) {
+        self.currentStep = currentStep
+        
+        guard let stack = subviews.first as? UIStackView else { return }
+        
+        stack.arrangedSubviews.enumerated().forEach { index, view in
+            guard let bubble = view as? StepBubbleView else { return }
+            bubble.update(state: stepState(for: index + 1))
+        }
+    }
 }

@@ -34,10 +34,14 @@ class StepBubbleView: UIView {
             heightAnchor.constraint(equalToConstant: 40)
         ])
 
-        configureAppearance()
+        update(state: state)
     }
 
-    private func configureAppearance() {
+    func update(state: StepState) {
+        subviews.forEach { $0.removeFromSuperview() }
+        
+        layer.borderWidth = 0
+        
         switch state {
         case .completed:
             backgroundColor = accentColor
@@ -55,5 +59,4 @@ class StepBubbleView: UIView {
             layer.borderWidth = 2
             addCenteredLabel(text: "\(number)", color: accentColor)
         }
-    }
-}
+    }}

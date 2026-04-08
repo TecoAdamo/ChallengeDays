@@ -35,8 +35,8 @@ final class LoginViewController: UIViewController {
         
         if viewModel.isFormValid {
             clearFields()
-            print("✅ válido")
-            navigationController?.pushViewController(ChallengeViewController(), animated: true)
+            let vc = ChallengeViewController(challengeName: viewModel.challenge)
+            navigationController?.pushViewController(vc, animated: true)
         } else {
             showAlert()
         }

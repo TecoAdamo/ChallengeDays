@@ -16,6 +16,7 @@ class ChallengeView: UIView {
     let stepperView = StepperView(steps: 7, currentStep: 2)
     
     let subCard = CustomCard()
+    let buttonCompletedChallenge = ButtonComponent(title: "Complete Day 1")
     
     lazy var label: UILabel = {
         let label = UILabel()
@@ -39,7 +40,6 @@ class ChallengeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        setupCard()
     }
     
     required init?(coder: NSCoder) {
@@ -58,10 +58,13 @@ class ChallengeView: UIView {
         
         addSubview(subCard)
         
+        addSubview(buttonCompletedChallenge)
+        
         card.translatesAutoresizingMaskIntoConstraints = false
         progressView.translatesAutoresizingMaskIntoConstraints = false
         stepperView.translatesAutoresizingMaskIntoConstraints = false
         subCard.translatesAutoresizingMaskIntoConstraints = false
+        buttonCompletedChallenge.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -88,14 +91,31 @@ class ChallengeView: UIView {
             subCard.centerXAnchor.constraint(equalTo: centerXAnchor),
             subCard.heightAnchor.constraint(equalToConstant: 60),
             
+            buttonCompletedChallenge.centerXAnchor.constraint(equalTo: subCard.centerXAnchor),
+            buttonCompletedChallenge.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
+            buttonCompletedChallenge.widthAnchor.constraint(equalTo: widthAnchor, constant: -48),
+            buttonCompletedChallenge.heightAnchor.constraint(equalToConstant: 50),
+            
         ])
-        progressView.setProgress(value: 2, total: 7)
+        progressView.setProgress(value: 4, total: 7)
     }
-    private func setupCard() {
-        card.configure(
-            title: "Estudar",
-            icon: "flame.fill"
-        )
-        subCard.configure(title: "Day 2 - The Beginning")
+
+    
+    func update(with state: ChallengeState){
+        progressView.setProgress(value: state.completedDays, total: state.totalDays)
+        
+        stepperView.update(currentStep: state.activeDay)
+        
+        subCard.configure(title: "Day \(state.activeDay) - The Beginning")
+        
+        if state.isFinished {
+            buttonCompletedChallenge.setTitle("🔄 Restart Challenge", for: .normal)
+            buttonCompletedChallenge.isEnabled = true
+        } else {
+            buttonCompletedChallenge.setTitle("Complete Day \(state.activeDay)", for: .normal)
+            buttonCompletedChallenge.isEnabled = true
+        }
+        label.text = "\(state.totalDays) Days"
+        card.configure(title: state.challengeName, icon: "flame.fill")
     }
 }
