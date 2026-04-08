@@ -61,9 +61,9 @@ Architecture: MVVM.
 └── Resources/
     └── Colors.swift
 ```
-```
-# Installation
 
+# Installation
+```
 # Clone the repository
 git clone https://github.com/your-username/ChallengeDays.git
 
