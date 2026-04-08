@@ -14,7 +14,7 @@ Built entirely with UIKit using View Code (no Storyboards, no XIBs) and Core Dat
 
 
 # ✨ Features
-
+```
 🎯 Custom Challenges — Create weekly challenges with a name and number of days
 📅 Daily Progress Tracking — Complete one day at a time with a clear visual flow
 🔄 Challenge Reset — Restart any challenge from scratch whenever you want
@@ -22,7 +22,7 @@ Built entirely with UIKit using View Code (no Storyboards, no XIBs) and Core Dat
 🪜 Day Stepper — Step-by-step view of each day's progress
 🏆 Friends Ranking — See who's completing the most challenges among your friends
 💾 Local Storage with Core Data — All data persists offline, no account required
-
+```
 
 # 🛠 Tech Stack
 ```
