@@ -25,12 +25,13 @@ Built entirely with UIKit using View Code (no Storyboards, no XIBs) and Core Dat
 
 
 # 🛠 Tech Stack
-
+```
 Layer: Technology
 Language: Swift 6
 UI Framework: UIKit (100% View Code)
 Persistence: Core Data
 Architecture: MVVM. 
+```
 
 # 🏗 Project Structure
 
