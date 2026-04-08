@@ -32,7 +32,7 @@ Architecture: MVVM.
 
 🏗 Project Structure
 
-` ChallengeDays/
+``` ChallengeDays/
 ├── App/
 │   ├── AppDelegate.swift
 │   └── SceneDelegate.swift
@@ -56,7 +56,8 @@ Architecture: MVVM.
 │   └── ChallengeDays.xcdatamodeld
 │
 └── Resources/
-    └── Colors.swift`
+    └── Colors.swift
+```
 
 Installation
 
