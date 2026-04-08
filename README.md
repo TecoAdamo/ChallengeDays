@@ -56,12 +56,12 @@ Architecture: MVVM.
 │   └── ChallengeDays.xcdatamodeld
 │
 └── Resources/
-    └── Colors.swift
-`
+    └── Colors.swift`
 
 Installation
 
-`# Clone the repository
+`
+# Clone the repository
 git clone https://github.com/your-username/ChallengeDays.git
 
 # Open in Xcode
